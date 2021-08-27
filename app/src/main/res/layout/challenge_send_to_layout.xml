@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_gunmetal"
+    android:orientation="vertical"
+    android:theme="@style/TransparentBackground">
+
+    <RelativeLayout
+        android:id="@+id/challenge_send_to_search_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp">
+
+        <EditText
+            android:id="@+id/challenge_send_to_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/search_layout"
+            android:ems="10"
+            android:hint="Send challenge to..."
+            android:inputType="textPersonName"
+            android:paddingStart="40dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/paleCerulean2"
+            android:textColorHint="@color/paleCerulean2"
+            android:textSize="16sp" />
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="20dp"
+            android:background="@null"
+            android:src="@drawable/ic_search_red" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/challenge_send_to_numberpicker_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-10dp"
+        android:layout_below="@+id/challenge_send_to_friends_list"
+        android:layout_centerHorizontal="true"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="Complete in"
+            android:textColor="@color/paleCerulean2"
+            android:textSize="17sp" />
+
+        <NumberPicker
+            android:id="@+id/challenge_send_to_days_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/NumberPickerLight" />
+
+        <TextSwitcher
+            android:id="@+id/challenge_send_to_days_picker_daysTxt"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:inAnimation="@android:anim/fade_in"
+            android:outAnimation="@android:anim/fade_out" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/challenge_send_to_friends_list"
+        android:layout_width="match_parent"
+        android:layout_height="235dp"
+        android:layout_below="@+id/challenge_send_to_search_wrapper"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/challenge_friends_recycler_layout" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="255dp"
+        android:layout_alignTop="@id/challenge_send_to_friends_list"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="-10dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/challenge_friends_recycler_frame" />
+
+    <RelativeLayout
+        android:alpha="0"
+        android:layout_marginTop="-10dp"
+        android:id="@+id/challenge_send_to_bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/challenge_send_to_numberpicker_wrapper"
+        android:background="@drawable/bottom_rounded_red"
+        android:padding="5dp">
+
+        <HorizontalScrollView
+            android:id="@+id/challenge_send_to_selected_users_txt_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="15dp"
+            android:layout_toStartOf="@id/challenge_send_to_btn"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <TextView
+                android:id="@+id/challenge_send_to_selected_users_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Argetim Ramadani"
+                android:textColor="@color/lightCyan3"
+                android:textSize="18sp" />
+        </HorizontalScrollView>
+
+        <ImageButton
+            android:id="@+id/challenge_send_to_btn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/rounded_edit_white"
+            android:src="@drawable/ic_send3" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

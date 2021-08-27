@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#293241</color>
+    <color name="colorPrimaryDark">#293241</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="splashBackground">#98C1D9</color>
+    <color name="purpleHeavy1">#3D5A80</color>
+    <color name="paleCerulean2">#98C1D9</color>
+    <color name="lightCyan3">#E0FBFC</color>
+    <color name="lightRedOchre4">#EE6C4D</color>
+    <color name="gunmetal5">#293241</color>
+</resources>

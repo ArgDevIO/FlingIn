@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/chat_item_card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="3dp"
+    android:layout_marginEnd="8dp"
+    app:cardBackgroundColor="@color/gunmetal5"
+    app:cardElevation="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:background="@drawable/ripple_gunmetal">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/chat_item_image_wrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="9dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/chat_item_image"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_gravity="center"
+                android:src="@drawable/com_facebook_profile_picture_blank_square"
+                android:transitionName="profile_picture" />
+
+            <ImageView
+                android:id="@+id/chat_item_online_ic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_online" />
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+        <LinearLayout
+            android:id="@+id/chat_item_text_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="14dp"
+            android:layout_toEndOf="@+id/chat_item_image_wrapper"
+            android:layout_toStartOf="@+id/chat_item_time_unread_wrapper"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/chat_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/username_hint"
+                android:textColor="@color/lightCyan3"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:transitionName="profile_name" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/chat_item_message_photo_ic"
+                    android:visibility="gone"
+                    android:layout_alignBottom="@+id/chat_item_message"
+                    android:layout_marginBottom="0.5dp"
+                    android:src="@drawable/ic_photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/chat_item_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:ellipsize="end"
+                    android:maxLength="38"
+                    android:maxLines="1"
+                    android:text="~"
+                    android:textColor="@color/paleCerulean2" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/chat_item_time_unread_wrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/chat_item_text_wrapper"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/chat_item_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:text="@string/chat_time_sample"
+                android:textColor="@color/lightCyan3" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/chat_item_unread_msg_counter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible">
+
+                <ImageView
+                    android:id="@+id/ic_unread_background"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_unread_messages"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/chat_item_unread_msg_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="1dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/lightCyan3"
+                    android:textSize="11dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ic_unread_background"
+                    app:layout_constraintEnd_toEndOf="@+id/ic_unread_background"
+                    app:layout_constraintStart_toStartOf="@+id/ic_unread_background"
+                    app:layout_constraintTop_toTopOf="@+id/ic_unread_background" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>
+
+

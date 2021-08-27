@@ -1,0 +1,82 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowDisablePreview">true</item>
+
+        <item name="android:windowBackground">@color/paleCerulean2</item>
+
+        <!-- specify enter and exit transitions -->
+        <item name="android:windowEnterTransition">@transition/explode</item>
+
+
+        <!-- specify shared element transitions -->
+        <item name="android:windowSharedElementEnterTransition">@transition/changebounds</item>
+    </style>
+
+    <style name="CropTheme" parent="@style/Theme.AppCompat">
+        <item name="colorPrimary">@color/lightRedOchre4</item>
+        <item name="titleTextColor">@color/lightCyan3</item>
+        <item name="actionMenuTextColor">@color/lightCyan3</item>
+        <item name="android:textColorPrimary">@color/lightCyan3</item>
+        <item name="android:windowBackground">@color/gunmetal5</item>
+    </style>
+
+    <style name="SwitchTheme" parent="Theme.AppCompat.Light">
+        <!-- inactive thumb color -->
+        <item name="colorSwitchThumbNormal">@color/gunmetal5
+        </item>
+
+        <item name="android:colorControlNormal">@color/gunmetal5</item>
+
+        <item name="android:colorForeground">@color/lightRedOchre4
+        </item>
+
+        <item name="android:colorControlActivated">@color/paleCerulean2</item>
+    </style>
+
+    <style name="AppTheme.Launcher">
+        <item name="android:windowBackground">@drawable/launch_screen</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="ToolbarTheme" parent="@style/Platform.ThemeOverlay.AppCompat.Dark">
+        <!-- Customize color of navigation drawer icon and back arrow -->
+        <item name="colorControlNormal">@color/lightCyan3</item>
+    </style>
+
+    <style name="NumberPickerLight" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textColorPrimary">@color/paleCerulean2</item>
+        <item name="colorControlNormal">@color/paleCerulean2</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="TransparentBackground" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+
+    //Facebook
+
+    <style name="FullyTranslucent" parent="android:Theme.Translucent.NoTitleBar">
+        <item name="android:progressBarStyle">@style/InvisibleProgress</item>
+    </style>
+
+    <style name="InvisibleProgress">
+        <item name="android:visibility">gone</item>
+    </style>
+
+</resources>

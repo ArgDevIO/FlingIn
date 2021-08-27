@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="3dp"
+    android:id="@+id/all_users_single_main_cardView"
+    app:cardElevation="5dp"
+    app:cardBackgroundColor="@color/gunmetal5"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:background="@drawable/ripple_gunmetal"
+        android:layout_width="match_parent"
+        android:layout_height="78dp">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/all_users_single_image_wrapper"
+            android:layout_marginStart="9dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/all_users_single_image"
+                android:transitionName="profile_picture"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_gravity="center"
+                android:src="@drawable/com_facebook_profile_picture_blank_square" />
+
+            <ImageView
+                android:id="@+id/all_user_single_online_ic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:layout_gravity="bottom|end"
+                app:srcCompat="@drawable/ic_online" />
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/all_users_single_image_wrapper"
+            android:layout_marginStart="14dp"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/all_user_single_name"
+                android:transitionName="profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/username_hint"
+                android:textColor="@color/lightCyan3"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/all_user_single_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:maxLength="38"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/paleCerulean2"
+                android:text="@string/default_status" />
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

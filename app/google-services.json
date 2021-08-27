@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "938449047548",
+    "firebase_url": "https://fling-in.firebaseio.com",
+    "project_id": "fling-in",
+    "storage_bucket": "fling-in.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:938449047548:android:a6db13404113b8b4066c79",
+        "android_client_info": {
+          "package_name": "argdev.io.flingin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "938449047548-8fauc2q87eht1jnue3be4bjk2jh9o5il.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "argdev.io.flingin",
+            "certificate_hash": "cf974b6ac02d10a9d98f46eb6a84f20ca891ca46"
+          }
+        },
+        {
+          "client_id": "938449047548-quh1dihnt6qh68rb0etdgbrmphjrh64q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbHQf11PIOhyzsG3FtfooY1h-dF0Zcv2c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "938449047548-ovfoo0j2sul1l7ikhfcaiufdsieg9lne.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
